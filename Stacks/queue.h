@@ -1,7 +1,10 @@
 #pragma once
+
 #include <iostream>
 
 using namespace std;
+
+const int MAX_QUEUE_SIZE = 100;
 
 class Queue 
 {

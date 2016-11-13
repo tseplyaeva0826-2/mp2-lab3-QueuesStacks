@@ -3,6 +3,9 @@
 
 using namespace std;
 
+const int MAX_STACK_SIZE = 100;
+
+
 class Stack
 {
 	char *ps;

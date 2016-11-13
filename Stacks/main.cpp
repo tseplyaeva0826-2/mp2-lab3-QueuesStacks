@@ -3,8 +3,9 @@
 int main()
 {
 	char str[15]; int len;
-
-	cin >> str; len = strlen(str);
+	char q;
+	int k = 0;
+	/*cin >> str; len = strlen(str);
 
 	Queue a(5);
 
@@ -17,6 +18,49 @@ int main()
 	cout << str << " ";
 
 	cout << a; // ошибка
+	*/
+
+	cout << "Enter an arithmetic expression" ;
+	cin >> str; len = strlen(str);
+
+	Queue exp(len), newexp(len);
+	
+	// добавляю все в очередь 
+	
+	for (int i = 0; i < len; i++)
+	{
+		exp.Qpush(str[i]);
+	}
+
+	// вариант без скобок
+
+	for (int i = exp.si; i != (exp.ei + 1) % len; i = (i + 1) % len)  // как запустить цикл прохода по очереди, если поля недоступны?
+	{
+		q = exp.pq[i];
+
+		switch q
+		{
+		case 0,1,2,3,4,5,6,7,8,9 : // преобразование типов? 
+			newexp.Qpush(pq[i]); break;
+		default :
+			k++; break;
+		} 
+	} 
+
+	for (int i = ; i ; i = )  // обратный цикл по очереди
+	{
+		q = exp.pq[i];
+
+		switch q
+		{
+		case '+','-','*','/': // преобразование типов? 
+			newexp.Qpush(pq[i]); break;
+		default:
+			k++; break;
+		}
+	}
+
+
 	
 	return 0;
 }
