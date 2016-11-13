@@ -1,4 +1,3 @@
 ﻿  main.cpp
-g:\work\tsepl\stacks\stacks\main.cpp(20): warning C4477: 'printf' : format string '%d' requires an argument of type 'int', but variadic argument 1 has type 'Queue'
   Stacks.vcxproj -> G:\work\tsepl\Stacks\Debug\Stacks.exe
   Stacks.vcxproj -> G:\work\tsepl\Stacks\Debug\Stacks.pdb (Full PDB)

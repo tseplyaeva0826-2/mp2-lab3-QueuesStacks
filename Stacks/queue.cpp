@@ -3,14 +3,14 @@
 Queue::Queue(int n)
 {
 	this->n = n;
-	p = new int[n];
+	pq = new char[n];
 	si = 0; ei = 0;
 }
 
 Queue::~Queue()
 {
-	delete[]p;
-	p = NULL;
+	delete[]pq;
+	pq = NULL;
 }
 
 bool Queue::ifEmpty()
@@ -24,17 +24,17 @@ bool Queue::ifFull()
 	{return 0; }
 }
 
-void Queue::push(int m)
+void Queue::Qpush(int m)
 {
 	if (ifFull()) throw "no";
 	si = (si + 1) % n;
-	p[si] = m;
+	pq[si] = m;
 }
 
-int Queue::take()
+int Queue::Qtake()
 {
 	if (ifEmpty()) throw "no";
-	int temp = p[ei];
+	int temp = pq[ei];
 	ei = (ei + 1) % n;
 	return temp;
 }
@@ -42,13 +42,13 @@ int Queue::take()
 ostream & operator<<(ostream &v, Queue &q)
 {
 	for (int i = q.si; i != (q.ei + 1) % q.n; i = (i + 1) % q.n)
-		v << q.p[i];
+		v << q.pq[i];
 	return v;
 }
 
 istream & operator>>(istream &v, Queue &q)
 {
 	for (int i = q.si; i != (q.ei + 1) % q.n; i = (i + 1) % q.n)
-		v >> q.p[i];
+		v >> q.pq[i];
 	return v;
 }

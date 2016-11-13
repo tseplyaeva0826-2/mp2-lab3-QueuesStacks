@@ -5,10 +5,10 @@ using namespace std;
 
 class Queue 
 {
-	int *p, n;
-	int si, ei;
+	char *pq;
+	int si, ei, n;
 
-	// methods
+	//	methods
 public :
 	Queue(int n);
 	~Queue();
@@ -16,8 +16,8 @@ public :
 	// access to a queue
 	bool ifEmpty();
 	bool ifFull();
-	void push(int m);
-	int  take();
+	void Qpush(int m);
+	int  Qtake();
 
 	friend istream & operator>>(istream &v, Queue &q);
 	friend ostream & operator<<(ostream &v, Queue &q);
