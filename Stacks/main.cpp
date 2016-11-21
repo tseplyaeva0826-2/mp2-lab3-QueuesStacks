@@ -1,25 +1,29 @@
 #include "queue.h"
+#include "stdio.h" 
+#include <conio.h> 
+
 
 int main()
 {
 	char str[15]; int len;
 	char q;
 	int k = 0;
-	/*cin >> str; len = strlen(str);
+	cin >> str; len = strlen(str);
 
-	Queue a(5);
+	Queue a(50);
+	
 
 	for (int i = 0; i < len; i++)
 	{
-		if ((str[i] < '0') || (str[i] > '9'))
+		if ((str[i] >= '0') || (str[i] <= '9'))
 			a.Qpush(str[i]);
 	}
 
 	cout << str << " ";
 
-	cout << a; // ошибка
-	*/
-
+	cout << a; 
+	_getch();
+/*
 	cout << "Enter an arithmetic expression" ;
 	cin >> str; len = strlen(str);
 
@@ -59,7 +63,7 @@ int main()
 			k++; break;
 		}
 	}
-
+	*/
 
 	
 	return 0;

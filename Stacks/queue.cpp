@@ -1,10 +1,13 @@
+
 #include "queue.h"
+
+
 
 Queue::Queue(int n)
 {
 	this->n = n;
-	pq = new char[n];
-	si = 0; ei = 0;
+	pq = new Value[n];
+	si = 0; ei = 1;
 }
 
 Queue::~Queue()
@@ -20,7 +23,7 @@ bool Queue::ifEmpty()
 
 bool Queue::ifFull()
 {
-	if ((si + 2) % n == 2) { return 1; }
+	if ((si + 2) % n == ei) { return 1; }
 	{return 0; }
 }
 
@@ -28,13 +31,15 @@ void Queue::Qpush(int m)
 {
 	if (ifFull()) throw "no";
 	si = (si + 1) % n;
-	pq[si] = m;
+	pq[si].datel = m;
+	pq[si].type = value;
+	
 }
 
 int Queue::Qtake()
 {
 	if (ifEmpty()) throw "no";
-	int temp = pq[ei];
+	int temp = pq[ei].datel;
 	ei = (ei + 1) % n;
 	return temp;
 }
@@ -42,13 +47,13 @@ int Queue::Qtake()
 ostream & operator<<(ostream &v, Queue &q)
 {
 	for (int i = q.si; i != (q.ei + 1) % q.n; i = (i + 1) % q.n)
-		v << q.pq[i];
+		v << q.pq[i].datel;
 	return v;
 }
 
 istream & operator>>(istream &v, Queue &q)
 {
 	for (int i = q.si; i != (q.ei + 1) % q.n; i = (i + 1) % q.n)
-		v >> q.pq[i];
+		v >> q.pq[i].datel;
 	return v;
 }

@@ -1,3 +1,4 @@
+
 #include "stack.h"
 
 Stack::Stack(int size)

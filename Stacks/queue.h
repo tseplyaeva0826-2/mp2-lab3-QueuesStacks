@@ -2,13 +2,22 @@
 
 #include <iostream>
 
+
 using namespace std;
 
 const int MAX_QUEUE_SIZE = 100;
 
+enum Type { value , operation };
+
+struct Value
+{
+	int datel;
+	Type type;
+};
+
 class Queue 
 {
-	char *pq;
+	Value *pq;
 	int si, ei, n;
 
 	//	methods
