@@ -1,5 +1,9 @@
-﻿  stack.cpp
-  queue.cpp
-  Generating Code...
-MSVCRTD.lib(exe_main.obj) : error LNK2019: unresolved external symbol _main referenced in function "int __cdecl invoke_main(void)" (?invoke_main@@YAHXZ)
-G:\work\tsepl\Stacks\Debug\Stacks.exe : fatal error LNK1120: 1 unresolved externals
+﻿Build started 28.11.2016 11:43:50.
+     1>Project "C:\temp\tseplyaeva\mp2-lab3-QueuesStacks\Stacks\Stacks.vcxproj" on node 2 (Build target(s)).
+     1>Lib:
+         Stacks.vcxproj -> C:\temp\tseplyaeva\mp2-lab3-QueuesStacks\Debug\Stacks.lib
+     1>Done Building Project "C:\temp\tseplyaeva\mp2-lab3-QueuesStacks\Stacks\Stacks.vcxproj" (Build target(s)).
+
+Build succeeded.
+
+Time Elapsed 00:00:00.06

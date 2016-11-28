@@ -1,6 +1,9 @@
+#include <stdio.h>
+#include <conio.h>
 #include <iostream>
 #include "queue.h"
 #include "stack.h"
+
 
 int main()
 {
