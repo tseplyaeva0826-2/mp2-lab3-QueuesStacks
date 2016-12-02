@@ -1,9 +1,9 @@
-﻿Build started 28.11.2016 11:43:50.
-     1>Project "C:\temp\tseplyaeva\mp2-lab3-QueuesStacks\Stacks\Stacks.vcxproj" on node 2 (Build target(s)).
+﻿Build started 02.12.2016 23:04:35.
+     1>Project "D:\laba\mp2-lab3-QueuesStacks\Stacks\Stacks.vcxproj" on node 2 (Build target(s)).
      1>Lib:
-         Stacks.vcxproj -> C:\temp\tseplyaeva\mp2-lab3-QueuesStacks\Debug\Stacks.lib
-     1>Done Building Project "C:\temp\tseplyaeva\mp2-lab3-QueuesStacks\Stacks\Stacks.vcxproj" (Build target(s)).
+         Stacks.vcxproj -> D:\laba\mp2-lab3-QueuesStacks\Debug\Stacks.lib
+     1>Done Building Project "D:\laba\mp2-lab3-QueuesStacks\Stacks\Stacks.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:00.06
+Time Elapsed 00:00:00.09

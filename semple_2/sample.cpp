@@ -5,71 +5,80 @@
 #include <iostream>
 #include "queue.h"
 #include "stack.h"
+#include <string>
+#include "conio.h"
 
 using namespace std;
 
 int main()
 {
 
-	char str[15]; int len;
-	char q;
+	string str1[20];
 	int k = 0;
-	cin >> str; len = strlen(str);
-
-	Queue a(50);
-
-
-	for (int i = 0; i < len; i++)
+	string str = "2 + 3* 12 - 10";
+	string op = "+-*/";
+	str += " ";
+	int n = str.length();
+	string s = "";
+	for (int i = 0; i < n; i++)
 	{
-		if ((str[i] >= '0') || (str[i] <= '9'))
-			a.Qpush(str[i]);
+		if ((str[i] >= '0') && (str[i] <= '9'))
+		{
+			s += str[i];
+		}
+		else
+		{
+			if (str[i] == ' ')
+			{
+				if (s.size()>0)
+				{
+					str1[k] = s;
+					s = "";
+					k++;
+				}
+			}
+			else
+			{
+				if (op.find(str[i]) >= 0)
+				{
+					if (s.size()>0)
+					{
+						str1[k] = s;
+						s = "";
+						k++; //положить в очередь 
+					}
+					str1[k] = str[i];
+					s = "";
+					k++;
+				}
+			}
+		}
 	}
 
-	cout << str << " ";
 
-	cout << a;
-//	_getch();
-	/*
-	cout << "Enter an arithmetic expression" ;
-	cin >> str; len = strlen(str);
-
-	Queue exp(len), newexp(len);
-
-	// добавляю все в очередь
-
-	for (int i = 0; i < len; i++)
+	printf("str1: (%d)\n", k);
+	for (int i = 0; i < k; i++)
 	{
-	exp.Qpush(str[i]);
+		printf("%s  \n", str1[i].c_str());
+
 	}
 
-	// вариант без скобок
-
-	for (int i = exp.si; i != (exp.ei + 1) % len; i = (i + 1) % len)  // как запустить цикл прохода по очереди, если поля недоступны?
+	int sum = atoi(str1[0].c_str());
+	for (int i = 1; i < k; i += 2)
 	{
-	q = exp.pq[i];
+		int val = atoi(str1[i + 1].c_str());
+		if (str1[i][0] == '+') sum += val;
+		if (str1[i][0] == '-') sum -= val;
+		if (str1[i][0] == '*') sum *= val;
+		if (str1[i][0] == '/')
+		{
+			if (val != 0) sum /= val;
 
-	switch q
-	{
-	case 0,1,2,3,4,5,6,7,8,9 : // преобразование типов?
-	newexp.Qpush(pq[i]); break;
-	default :
-	k++; break;
-	}
+			else  throw "can`t perform an operation";
+		}
 	}
 
-	for (int i = ; i ; i = )  // обратный цикл по очереди
-	{
-	q = exp.pq[i];
-
-	switch q
-	{
-	case '+','-','*','/': // преобразование типов?
-	newexp.Qpush(pq[i]); break;
-	default:
-	k++; break;
-	}
-	}
-	*/
+	printf("result: %d\n", sum);
 
     return 0;
 }

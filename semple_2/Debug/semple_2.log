@@ -1,15 +1,15 @@
-﻿Build started 28.11.2016 11:43:50.
-     1>Project "C:\temp\tseplyaeva\mp2-lab3-QueuesStacks\semple_2\semple_2.vcxproj" on node 2 (Build target(s)).
+﻿Build started 03.12.2016 0:01:14.
+     1>Project "D:\laba\mp2-lab3-QueuesStacks\semple_2\semple_2.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (semple_2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\Stacks /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt sample.cpp
+         D:\VisualStudio2013\VC\bin\CL.exe /c /I..\Stacks /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt sample.cpp
          sample.cpp
-     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(15): warning C4101: 'q' : unreferenced local variable
        Link:
-         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\temp\tseplyaeva\mp2-lab3-QueuesStacks\Debug\semple_2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\temp\tseplyaeva\mp2-lab3-QueuesStacks\Debug\semple_2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\temp\tseplyaeva\mp2-lab3-QueuesStacks\Debug\semple_2.lib" /MACHINE:X86 Debug\sample.obj
-         "C:\temp\tseplyaeva\mp2-lab3-QueuesStacks\Debug\Stacks.lib"
-         semple_2.vcxproj -> C:\temp\tseplyaeva\mp2-lab3-QueuesStacks\Debug\semple_2.exe
-     1>Done Building Project "C:\temp\tseplyaeva\mp2-lab3-QueuesStacks\semple_2\semple_2.vcxproj" (Build target(s)).
+         D:\VisualStudio2013\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\laba\mp2-lab3-QueuesStacks\Debug\sample_2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\laba\mp2-lab3-QueuesStacks\Debug\sample_2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\laba\mp2-lab3-QueuesStacks\Debug\sample_2.lib" /MACHINE:X86 Debug\sample.obj
+         "D:\laba\mp2-lab3-QueuesStacks\Debug\Stacks.lib"
+         semple_2.vcxproj -> D:\laba\mp2-lab3-QueuesStacks\Debug\sample_2.exe
+     1>Done Building Project "D:\laba\mp2-lab3-QueuesStacks\semple_2\semple_2.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.33
+Time Elapsed 00:00:01.51
