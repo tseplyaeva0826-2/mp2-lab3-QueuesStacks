@@ -30,6 +30,7 @@ public :
 	bool ifFull();
 	void Qpush(int m);
 	int  Qtake();
+	void Qpushchar(char m);
 
 	friend istream & operator>>(istream &v, Queue &q);
 	friend ostream & operator<<(ostream &v, Queue &q);

@@ -1,9 +1,14 @@
-﻿Build started 02.12.2016 23:04:35.
-     1>Project "D:\laba\mp2-lab3-QueuesStacks\Stacks\Stacks.vcxproj" on node 2 (Build target(s)).
-     1>Lib:
-         Stacks.vcxproj -> D:\laba\mp2-lab3-QueuesStacks\Debug\Stacks.lib
-     1>Done Building Project "D:\laba\mp2-lab3-QueuesStacks\Stacks\Stacks.vcxproj" (Build target(s)).
+﻿Сборка начата 04.12.2016 23:30:58.
+     1>Проект "G:\work\tsepl\mp2-lab3-QueuesStacks\Stacks\Stacks.vcxproj" в узле 2 (целевые объекты Build).
+     1>ClCompile:
+         G:\VS\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt stack.cpp
+         stack.cpp
+       Lib:
+         G:\VS\VC\bin\Lib.exe /OUT:"G:\work\tsepl\mp2-lab3-QueuesStacks\Debug\Stacks.lib" /NOLOGO Debug\queue.obj
+         Debug\stack.obj
+         Stacks.vcxproj -> G:\work\tsepl\mp2-lab3-QueuesStacks\Debug\Stacks.lib
+     1>Сборка проекта "G:\work\tsepl\mp2-lab3-QueuesStacks\Stacks\Stacks.vcxproj" завершена (целевые объекты Build).
 
-Build succeeded.
+Сборка успешно завершена.
 
-Time Elapsed 00:00:00.09
+Затраченное время: 00:00:02.37

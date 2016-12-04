@@ -8,6 +8,7 @@ Queue::Queue(int n)
 	this->n = n;
 	pq = new Value[n];
 	si = 0; ei = 1;
+	
 }
 
 Queue::~Queue()
@@ -36,6 +37,16 @@ void Queue::Qpush(int m)
 	
 }
 
+void Queue::Qpushchar(char m)
+{
+	if (ifFull()) throw "no";
+	si = (si + 1) % n;
+	pq[si].datel =(int)(m);
+	pq[si].type = operation;
+
+}
+
+
 int Queue::Qtake()
 {
 	if (ifEmpty()) throw "no";
@@ -57,3 +68,4 @@ istream & operator>>(istream &v, Queue &q)
 		v >> q.pq[i].datel;
 	return v;
 }
+
