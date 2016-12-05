@@ -1,15 +1,38 @@
-﻿Сборка начата 04.12.2016 23:31:00.
-     1>Проект "G:\work\tsepl\mp2-lab3-QueuesStacks\semple_2\semple_2.vcxproj" в узле 2 (целевые объекты Build).
-     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (semple_2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
+﻿Build started 05.12.2016 10:50:20.
+     1>Project "C:\temp\tseplyaeva\mp2-lab3-QueuesStacks\semple_2\semple_2.vcxproj" on node 2 (Build target(s)).
+     1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(381,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (semple_2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
-         G:\VS\VC\bin\CL.exe /c /I..\Stacks /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt sample.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /I..\Stacks /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt sample.cpp
          sample.cpp
-       Link:
-         G:\VS\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"G:\work\tsepl\mp2-lab3-QueuesStacks\Debug\sample_2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"G:\work\tsepl\mp2-lab3-QueuesStacks\Debug\sample_2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"G:\work\tsepl\mp2-lab3-QueuesStacks\Debug\sample_2.lib" /MACHINE:X86 Debug\sample.obj
-         "G:\work\tsepl\mp2-lab3-QueuesStacks\Debug\Stacks.lib"
-         semple_2.vcxproj -> G:\work\tsepl\mp2-lab3-QueuesStacks\Debug\sample_2.exe
-     1>Сборка проекта "G:\work\tsepl\mp2-lab3-QueuesStacks\semple_2\semple_2.vcxproj" завершена (целевые объекты Build).
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(85): error C3861: 'ifvalue': identifier not found
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(85): error C2143: syntax error : missing '}' before ';'
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(85): error C2143: syntax error : missing ')' before ';'
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(85): warning C4390: ';' : empty controlled statement found; is this the intent?
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(86): error C2181: illegal else without matching if
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(88): error C2065: 'i' : undeclared identifier
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(92): error C2065: 'i' : undeclared identifier
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(93): error C2065: 'i' : undeclared identifier
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(97): error C2065: 'i' : undeclared identifier
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(101): error C2065: 'i' : undeclared identifier
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(117): error C2059: syntax error : 'while'
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(118): error C2143: syntax error : missing ';' before '{'
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(118): error C2447: '{' : missing function header (old-style formal list?)
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(125): error C2059: syntax error : 'for'
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(125): error C2143: syntax error : missing ')' before ';'
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(125): error C2143: syntax error : missing ';' before '<'
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(125): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(125): error C2143: syntax error : missing ';' before '++'
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(125): error C2086: 'int i' : redefinition
+                 c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(125) : see declaration of 'i'
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(125): error C2059: syntax error : ')'
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(125): error C2143: syntax error : missing ';' before '{'
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(125): error C2447: '{' : missing function header (old-style formal list?)
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(128): warning C4138: '*/' found outside of comment
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(128): error C2059: syntax error : '/'
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(152): error C2059: syntax error : '}'
+     1>c:\temp\tseplyaeva\mp2-lab3-queuesstacks\semple_2\sample.cpp(152): error C2143: syntax error : missing ';' before '}'
+     1>Done Building Project "C:\temp\tseplyaeva\mp2-lab3-QueuesStacks\semple_2\semple_2.vcxproj" (Build target(s)) -- FAILED.
 
-Сборка успешно завершена.
+Build FAILED.
 
-Затраченное время: 00:00:00.59
+Time Elapsed 00:00:00.64

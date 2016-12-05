@@ -55,6 +55,9 @@ int Queue::Qtake()
 	return temp;
 }
 
+
+
+
 ostream & operator<<(ostream &v, Queue &q)
 {
 	for (int i = q.si; i != (q.ei + 1) % q.n; i = (i + 1) % q.n)

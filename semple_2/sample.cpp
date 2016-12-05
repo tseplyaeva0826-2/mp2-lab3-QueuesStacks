@@ -13,6 +13,7 @@ using namespace std;
 int main()
 {
 
+
 	string str1[20];
 	int k = 0;
 	string str = "2 + 3* 12 - 10";
@@ -59,20 +60,35 @@ int main()
 					s = "";
 					k++;
 					char l = str[i];
-					que.Qpushchar(l);// положить символ в очередь
+					que.Qpushchar(l); // положить символ в очередь ƒ≈Ћј“№ »« —“–” “”– ј Ќ≈ —»ћ¬ќЋќ¬
 				}
 			}
 		}
 	}
 
+	// строку разбить на строки , содержащие тип чтобы двузн числа были
+	
+	
 
-	printf("str1: (%d)\n", k);
+
+	/*
+	bool isParam(string line)
+	{
+		if (isdigit(atoi(line.c_str()))) return true;
+		return false;
+	}
+
+	*/
+
+
+
+printf("str1: (%d)\n", k);
 	for (int i = 0; i < k; i++)
 	{
 		printf("%s  \n", str1[i].c_str());
 
 	}
-
+	/**/
 	// ќЅ–ј“Ќјя ѕќЋ№— јя «јѕ»—№ 
 	Stack temps(n+1);
 	Queue final(n + 1);
@@ -82,16 +98,16 @@ int main()
 	int p = -1;
 	for (int i = 0; i < k+1; i++)
 	{
-		if (isalnum(str1[i])) { final.Qpush(str[i]); }  // если число - помещаю в очередь 
+		if ( ifvalue(str1[i] )) { final.Qpush(str[i]); }  // если число - помещаю в очередь 
 		else
 			{
-			if ((pr1.find(str1[i]) >= 0) || (pr2.find(str[i]) >= 0) || (str1[i] = "(")) // если ( /* +- помещаю в стек 
+			if ((pr1.find(str1[i]) >= 0) || (pr2.find(str[i]) >= 0) || (str1[i] == "(")) // если ( /* +- помещаю в стек 
 			{
 
 				
 				if (pr1.find(str[i]) >= 0) p = 1;
 				if (pr1.find(str[i]) >= 0) p = 2;
-				if ( p < )								//сравнение приоритетов 
+				//if ( p < )								//сравнение приоритетов 
 
 
 				temps.Spush(str1[i]); 
@@ -112,9 +128,7 @@ int main()
 		
 	}
 
-
-
-	while (temps.StackIsEmpty() == false) //выталкиваю элементы из стека в строку final
+	while (temps.StackIsEmpty() == false) //выталкиваю оставшиес€ элементы из стека в строку final
 	{
 		char l = temps.Stake();
 		final.Qpushchar(l);
@@ -125,8 +139,6 @@ int main()
 	for (int i = 0; i < n; i++) {     // вывод очереди
 		cout << que.Qtake() << endl;
 	}
-
-	
 	/*for (int i = 0; i < n; i++) {     // вывод очереди
 		cout << que.Qtake() << endl;
 	}
