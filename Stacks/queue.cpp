@@ -37,11 +37,11 @@ void Queue::Qpush(int m)
 	
 }
 
-void Queue::Qpushchar(char m)
+void Queue::Qpushchar(int m)
 {
 	if (ifFull()) throw "no";
 	si = (si + 1) % n;
-	pq[si].datel =(int)(m);
+	pq[si].datel =m;
 	pq[si].type = operation;
 
 }

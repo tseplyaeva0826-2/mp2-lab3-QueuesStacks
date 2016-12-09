@@ -21,6 +21,8 @@ int main()
 	str += " ";
 	int n = str.length();
 	string s = "";
+	string sn = "";
+	int m;
 
 	Stack abc(n+1);
 	Queue que(n+1);
@@ -31,7 +33,7 @@ int main()
 		{
 			s += str[i];
 			int m = str[i];
-		que.Qpush(m); // положить цифру в очередь 
+	//	que.Qpush(m); // положить цифру в очередь 
 		
 		}
 		else
@@ -60,35 +62,57 @@ int main()
 					s = "";
 					k++;
 					char l = str[i];
-					que.Qpushchar(l); // положить символ в очередь ƒ≈Ћј“№ »« —“–” “”– ј Ќ≈ —»ћ¬ќЋќ¬
+				//	que.Qpushchar(l); // положить символ в очередь ƒ≈Ћј“№ »« —“–” “”– ј Ќ≈ —»ћ¬ќЋќ¬
 				}
 			}
 		}
 	}
 
+
 	// строку разбить на строки , содержащие тип чтобы двузн числа были
 	
 	
-
-
-	/*
-	bool isParam(string line)
+	for (int i = 0; i < n-1; i++)  							  // последний элемент как-то проверить тоже надо
 	{
-		if (isdigit(atoi(line.c_str()))) return true;
-		return false;
+		if ((str[i] >= '0') && (str[i] <= '9'))               // i-й элемент цифра
+		{
+			sn += str1[i];                                    // в строку
+
+			if ((str[i + 1] >= '0') && (str[i + 1] <= '9'))   // i+1 элемент цифра 
+			{
+
+				sn += str1[i + 1];        // добавл€ю к строке
+				m = atoi(sn.c_str());     // строку в инт
+				que.Qpush(m);             // в очередь 
+				sn = "";
+			}
+
+			else						// если дальше символ
+			{
+				m = atoi(sn.c_str());	// цифру в число 
+				que.Qpush(m);			// в очередь
+				sn = "";
+			}
+		}
+		else                             // если символ 
+		{
+		
+			char 	m = str1[i].c_str(); // узнать как-то код символа
+			m = (int)(l);                // 
+			que.Qpushchar(m);			 // в очередь
+		}
 	}
 
-	*/
 
+	
 
+	printf("str1: (%d)\n", k);
+		for (int i = 0; i < k; i++)
+		{
+				printf("%s  \n", str1[i].c_str());
 
-printf("str1: (%d)\n", k);
-	for (int i = 0; i < k; i++)
-	{
-		printf("%s  \n", str1[i].c_str());
-
-	}
-	/**/
+		}
+/*	
 	// ќЅ–ј“Ќјя ѕќЋ№— јя «јѕ»—№ 
 	Stack temps(n+1);
 	Queue final(n + 1);
@@ -135,30 +159,25 @@ printf("str1: (%d)\n", k);
 	}
 
 
-
+	*/
 	for (int i = 0; i < n; i++) {     // вывод очереди
 		cout << que.Qtake() << endl;
 	}
-	/*for (int i = 0; i < n; i++) {     // вывод очереди
-		cout << que.Qtake() << endl;
-	}
-
-	/*int sum = atoi(str1[0].c_str());
+	
+	
+	int sum = 0;
+	 sum = atoi(str1[0].c_str());
 	for (int i = 1; i < k; i += 2)
 	{
 		int val = atoi(str1[i + 1].c_str());
 		if (str1[i][0] == '+') sum += val;
 		if (str1[i][0] == '-') sum -= val;
 		if (str1[i][0] == '*') sum *= val;
-		if (str1[i][0] == '/')
-		{
-			if (val != 0) sum /= val;
-
-			else  throw "can`t perform an operation";
-		}
+		if (str1[i][0] == '/') sum /= val;
+		
 	}
 
-	printf("result: %d\n", sum);**/
+	printf("result: %d\n", sum);
 
     return 0;
 }

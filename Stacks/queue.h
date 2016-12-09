@@ -24,13 +24,13 @@ class Queue
 public :
 	Queue(int n);
 	~Queue();
-
+	
 	// access to a queue
 	bool ifEmpty();
 	bool ifFull();
 	void Qpush(int m);
 	int  Qtake();
-	void Qpushchar(char m);
+	void Qpushchar(int m);
 	
 
 	friend istream & operator>>(istream &v, Queue &q);
