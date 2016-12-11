@@ -1,5 +1,7 @@
 
+
 #include "queue.h"
+#include "func.h"
 
 
 
@@ -37,6 +39,7 @@ void Queue::Qpush(int m)
 	
 }
 
+
 void Queue::Qpushchar(int m)
 {
 	if (ifFull()) throw "no";
@@ -47,10 +50,16 @@ void Queue::Qpushchar(int m)
 }
 
 
-int Queue::Qtake()
+Value Queue::Qtake()
 {
 	if (ifEmpty()) throw "no";
-	int temp = pq[ei].datel;
+	Value temp;
+	temp.datel = pq[ei].datel;
+	if (IfValue(temp) == 1)
+		temp.type = value;
+	else
+		temp.type = operation;
+	
 	ei = (ei + 1) % n;
 	return temp;
 }

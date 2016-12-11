@@ -1,9 +1,11 @@
-﻿Сборка начата 11.12.2016 13:43:07.
+﻿Сборка начата 11.12.2016 19:30:28.
      1>Проект "C:\Users\Настя\Desktop\12312312\11\copy\mp2-lab3-QueuesStacks\semple_2\semple_2.vcxproj" в узле 2 (целевые объекты Build).
      1>C:\Program Files (x86)\MSBuild\Microsoft.Cpp\v4.0\V120\Microsoft.CppBuild.targets(388,5): warning MSB8028: The intermediate directory (Debug\) contains files shared from another project (semple_2.vcxproj).  This can lead to incorrect clean and rebuild behavior.
      1>ClCompile:
          G:\VS\VC\bin\CL.exe /c /I..\Stacks /ZI /nologo /W3 /WX- /sdl /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _LIB /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc120.pdb" /Gd /TP /analyze- /errorReport:prompt sample.cpp
          sample.cpp
+     1>c:\users\настя\desktop\12312312\11\copy\mp2-lab3-queuesstacks\semple_2\sample.cpp(33): warning C4101: p: неиспользованная локальная переменная
+     1>c:\users\настя\desktop\12312312\11\copy\mp2-lab3-queuesstacks\semple_2\sample.cpp(31): warning C4101: z: неиспользованная локальная переменная
        Link:
          G:\VS\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Настя\Desktop\12312312\11\copy\mp2-lab3-QueuesStacks\Debug\sample_2.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Настя\Desktop\12312312\11\copy\mp2-lab3-QueuesStacks\Debug\sample_2.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Настя\Desktop\12312312\11\copy\mp2-lab3-QueuesStacks\Debug\sample_2.lib" /MACHINE:X86 Debug\sample.obj
          "C:\Users\Настя\Desktop\12312312\11\copy\mp2-lab3-QueuesStacks\Debug\Stacks.lib"
@@ -12,4 +14,4 @@
 
 Сборка успешно завершена.
 
-Затраченное время: 00:00:00.54
+Затраченное время: 00:00:00.55

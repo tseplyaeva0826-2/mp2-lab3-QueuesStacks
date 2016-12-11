@@ -29,8 +29,9 @@ public :
 	bool ifEmpty();
 	bool ifFull();
 	void Qpush(int m);
-	int  Qtake();
+	Value  Qtake();
 	void Qpushchar(int m);
+	
 	
 
 	friend istream & operator>>(istream &v, Queue &q);

@@ -1,9 +1,10 @@
 
+#include "queue.h"
 #include "stack.h"
 
 Stack::Stack(int size)
 {
-	ps = new char[size];
+	ps = new Value[size];
 
 	top = 0;
 }
@@ -14,14 +15,18 @@ Stack::~Stack()
 	ps = NULL;
 }
 
-void Stack::Spush(char m)
+void Stack::Spush(Value m)
 {
-	ps[top++] = m;
+	ps[top++].datel = m.datel;
+	if (m.type == value)
+		ps[top++].type = value;
+	else
+		ps[top++].type = operation;
 }
 
-char Stack::Stake()
+Value Stack::Stake()
 {
-	char temp = ps[top];
+	Value temp = ps[top];
 	--top;
 	return temp;
 }
@@ -37,3 +42,4 @@ bool Stack::StackIsEmpty()
 	if (top == 0)  return 1; 
 	return 0;
 }
+
