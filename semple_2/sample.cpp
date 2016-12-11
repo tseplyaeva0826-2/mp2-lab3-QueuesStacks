@@ -8,18 +8,20 @@
 #include <string>
 #include "conio.h"
 
+
 using namespace std;
 
 int main()
 {
 
 
-	string str1[20];
+	
 	int k = 0;
 	string str = "2 + 3* 12 - 10";
 	string op = "+-*/";
 	str += " ";
 	int n = str.length();
+	string str1[15];
 	string s = "";
 	string sn = "";
 	int m;
@@ -33,8 +35,6 @@ int main()
 		{
 			s += str[i];
 			int m = str[i];
-	//	que.Qpush(m); // положить цифру в очередь 
-		
 		}
 		else
 		{
@@ -61,27 +61,44 @@ int main()
 					str1[k] = str[i];
 					s = "";
 					k++;
-					char l = str[i];
-				//	que.Qpushchar(l); // положить символ в очередь ƒ≈Ћј“№ »« —“–” “”– ј Ќ≈ —»ћ¬ќЋќ¬
 				}
 			}
 		}
 	}
 
 
+	// вывод строки ( из строк ) без пробелов
+
+	
+
+	printf("str1: (%d)\n", k);
+
+	printf("String of dates and signs : \n");
+	for (int i = 0; i < k; i++)
+	{
+		printf("%s  \n", str1[i].c_str());
+
+	}
+
+	printf("\n");
+	printf("\n");
+	printf("\n");
+
+
+	
 	// строку разбить на строки , содержащие тип чтобы двузн числа были
 	
 	
-	for (int i = 0; i < n-1; i++)  							  // последний элемент как-то проверить тоже надо
+	for (int i = 0; i < k; i++)  							  // последний элемент как-то проверить тоже надо
 	{
-		if ((str[i] >= '0') && (str[i] <= '9'))               // i-й элемент цифра
+		if ((str1[i][0] >= '0') && (str1[i][0] <= '9'))               // i-й элемент цифра
 		{
-			sn += str1[i];                                    // в строку
-
-			if ((str[i + 1] >= '0') && (str[i + 1] <= '9'))   // i+1 элемент цифра 
+			sn += str1[i][0];                                    // в строку
+			
+			if ((str1[i][1] >= '0') && (str1[i][1] <= '9'))   // i+1 элемент цифра 
 			{
 
-				sn += str1[i + 1];        // добавл€ю к строке
+				sn += str1[i][1];        // добавл€ю к строке
 				m = atoi(sn.c_str());     // строку в инт
 				que.Qpush(m);             // в очередь 
 				sn = "";
@@ -96,75 +113,46 @@ int main()
 		}
 		else                             // если символ 
 		{
-		
-			char 	m = str1[i].c_str(); // узнать как-то код символа
-			m = (int)(l);                // 
+			if (str1[i][0] == '+')
+			{
+				m = 43;
+			}
+			else
+			{
+				if (str1[i][0] == '-')
+				{ m = 45; }
+				else 
+				{
+					if (str1[i][0] == '*')
+						{ m = 42; }
+						else
+						{
+							m = 47;
+						}
+				}
+			}
+			
+			               
 			que.Qpushchar(m);			 // в очередь
 		}
 	}
 
 
 	
+	
 
-	printf("str1: (%d)\n", k);
-		for (int i = 0; i < k; i++)
-		{
-				printf("%s  \n", str1[i].c_str());
-
-		}
-/*	
-	// ќЅ–ј“Ќјя ѕќЋ№— јя «јѕ»—№ 
-	Stack temps(n+1);
-	Queue final(n + 1);
-	string pr1 = "/*";
-	string pr2 = "+-";
-	 // string pr3 = "()";
-	int p = -1;
-	for (int i = 0; i < k+1; i++)
-	{
-		if ( ifvalue(str1[i] )) { final.Qpush(str[i]); }  // если число - помещаю в очередь 
-		else
-			{
-			if ((pr1.find(str1[i]) >= 0) || (pr2.find(str[i]) >= 0) || (str1[i] == "(")) // если ( /* +- помещаю в стек 
-			{
-
-				
-				if (pr1.find(str[i]) >= 0) p = 1;
-				if (pr1.find(str[i]) >= 0) p = 2;
-				//if ( p < )								//сравнение приоритетов 
+	// вывод очереди
 
 
-				temps.Spush(str1[i]); 
-			}
-			else
-					{
-					if (str1[i] = ")") 
-					{
-						while (temps.StackIsEmpty() == false) //выталкиваю элементы из стека в строку final
-						{
-							char l = temps.Stake();
-							if (l != '(' ) final.Qpushchar(l);
-						}
-					}
-					}
-			}
-		
-		
-	}
-
-	while (temps.StackIsEmpty() == false) //выталкиваю оставшиес€ элементы из стека в строку final
-	{
-		char l = temps.Stake();
-		final.Qpushchar(l);
-	}
-
-
-	*/
-	for (int i = 0; i < n; i++) {     // вывод очереди
+	for (int i = 0; i < n; i++) {     
 		cout << que.Qtake() << endl;
 	}
 	
+
+
 	
+	/*   -----------—”ћћј ¬ —јћќћ Ќј„јЋ≈----------------------
+
 	int sum = 0;
 	 sum = atoi(str1[0].c_str());
 	for (int i = 1; i < k; i += 2)
@@ -178,6 +166,8 @@ int main()
 	}
 
 	printf("result: %d\n", sum);
+	
+	*/
 
     return 0;
 }
